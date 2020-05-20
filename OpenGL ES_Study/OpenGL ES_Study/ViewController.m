@@ -18,14 +18,14 @@ typedef struct {
 
 // vertices 变量是一个用顶点数据初始化的普通 C 数组，这个变量用来定义一个三角形,默认的用于一个 OpenGL 上下文的可 见坐标系是分别沿着 X、Y、Z 轴从 –1.0 延伸到 1.0 的
 static const SceneVertex vertices[] = {
-    {-0.5f, -0.5f, 0.0f},
-    { 0.5f, -0.5f, 0.0f},
-    {-0.5f,  0.5f, 0.0f},
+    {{-0.5f, -0.5f, 0.0}},
+    {{ 0.5f, -0.5f, 0.0}},
+    {{-0.5f,  0.5f, 0.0}}
 };
 
 @interface ViewController (){
     // vertexBufferID 变 量 保 存 了 用于盛放本例中用到的顶点数据的缓存的 OpenGL ES 标识符，缓存标识符实际上是无符号整型。0 值表示没有缓存
-    GLuint vertexBufferId;
+    GLuint vertexBufferID;
 }
 //GLKBaseEffect 是 GLKit 提供的另一个内建类。GLKBaseEffect 的存在是为了简 化 OpenGL ES 的很多常用操作。GLKBaseEffect 隐藏了 iOS 设备支持的多个 OpenGL ES 版本之间的差异。在应用中使用 GLKBaseEffect 能减少需要编写的代码量。在 OpenGLES_Ch2_1ViewController 的实现中详细解释了 GLKBaseEffect。
 @property (strong, nonatomic) GLKBaseEffect *baseEffect;
@@ -61,7 +61,7 @@ static const SceneVertex vertices[] = {
      GLuint vbo[3];
      glGenBuffers(3,vbo);
      */
-    glGenBuffers(1, &vertexBufferId);
+    glGenBuffers(1, &vertexBufferID);
     
     // step2：绑定（Bind），glBindBuffer() 函数绑定用于指定标识符的缓存到当前缓存，第一个参数是一个常量，用于指定要绑定哪一种类型的缓存，第二个参数是要绑定的缓存的标识符
     /*
@@ -69,7 +69,7 @@ static const SceneVertex vertices[] = {
      
      OpenGL ES 2.0对于glBindBuffer()的实现只支持两种类型的缓存，GL_ARRAY_ BUFFER 和 GL_ELEMENT_ARRAY_BUFFER，GL_ARRAY_BUFFER 类型用于指定一个顶点属性数组
      */
-    glBindBuffer(GL_ARRAY_BUFFER, vertexBufferId);
+    glBindBuffer(GL_ARRAY_BUFFER, vertexBufferID);
     
     // step3：缓存数据（Buffer Data）,参数1：缓冲类型，参数2：缓存数据的大小，参数3：缓存指针，参数4：缓存的使用类型
     /*
@@ -102,11 +102,13 @@ static const SceneVertex vertices[] = {
 
 - (void)dealloc {
     // step7：删除
-    glDeleteBuffers(1, &vertexBufferId);
-    vertexBufferId = 0;
+    glDeleteBuffers(1, &vertexBufferID);
+    vertexBufferID = 0;
     
     ((GLKView *)self.view).context = nil;
     [EAGLContext setCurrentContext:nil];
 }
+
+#pragma private
 
 @end
