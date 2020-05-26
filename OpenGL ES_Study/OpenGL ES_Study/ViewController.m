@@ -100,6 +100,8 @@ static const SceneVertex vertices[] = {
     glDrawArrays(GL_TRIANGLES, 0, 3);
 }
 
+
+
 - (void)dealloc {
     // step7：删除
     glDeleteBuffers(1, &vertexBufferID);
