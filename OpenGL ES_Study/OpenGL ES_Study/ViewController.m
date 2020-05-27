@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MetalViewController.h"
 
 // GLKBaseEffect在iOS 12会提示警告废弃，可以在项目中配置 GLES_SILENCE_DEPRECATION忽略
 
@@ -111,6 +112,8 @@ static const SceneVertex vertices[] = {
     [EAGLContext setCurrentContext:nil];
 }
 
-#pragma private
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.navigationController pushViewController:[[MetalViewController alloc] init] animated:YES];
+}
 
 @end

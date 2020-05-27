@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35DD1853247D279800092BC5 /* MetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DD1852247D279800092BC5 /* MetalViewController.m */; };
+		35DD1860247DF31A00092BC5 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = 35DD1855247DF31A00092BC5 /* test.mov */; };
+		35DD1861247DF31A00092BC5 /* greenscreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 35DD1856247DF31A00092BC5 /* greenscreen.mp4 */; };
+		35DD1862247DF31A00092BC5 /* test.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 35DD1857247DF31A00092BC5 /* test.jpeg */; };
+		35DD1863247DF31A00092BC5 /* Metal 着色语言指南.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 35DD1859247DF31A00092BC5 /* Metal 着色语言指南.pdf */; };
+		35DD1864247DF31A00092BC5 /* Metal 编程指南.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 35DD185A247DF31A00092BC5 /* Metal 编程指南.pdf */; };
+		35DD1865247DF31A00092BC5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 35DD185B247DF31A00092BC5 /* README.md */; };
+		35DD1866247DF31A00092BC5 /* abc.png in Resources */ = {isa = PBXBuildFile; fileRef = 35DD185C247DF31A00092BC5 /* abc.png */; };
+		35DD1867247DF31A00092BC5 /* abc.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 35DD185D247DF31A00092BC5 /* abc.mp4 */; };
+		35DD1868247DF31A00092BC5 /* lookupTable.png in Resources */ = {isa = PBXBuildFile; fileRef = 35DD185E247DF31A00092BC5 /* lookupTable.png */; };
+		35DD1869247DF31A00092BC5 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 35DD185F247DF31A00092BC5 /* image.png */; };
+		35DD186B247E00B600092BC5 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 35DD186A247E00B600092BC5 /* Shader.metal */; };
 		9C8C98942473D67F00B4A125 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C98932473D67F00B4A125 /* AppDelegate.m */; };
 		9C8C989A2473D67F00B4A125 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C98992473D67F00B4A125 /* ViewController.m */; };
 		9C8C989D2473D67F00B4A125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8C989B2473D67F00B4A125 /* Main.storyboard */; };
@@ -17,6 +29,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35DD1851247D279800092BC5 /* MetalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalViewController.h; sourceTree = "<group>"; };
+		35DD1852247D279800092BC5 /* MetalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalViewController.m; sourceTree = "<group>"; };
+		35DD1855247DF31A00092BC5 /* test.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.mov; sourceTree = "<group>"; };
+		35DD1856247DF31A00092BC5 /* greenscreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = greenscreen.mp4; sourceTree = "<group>"; };
+		35DD1857247DF31A00092BC5 /* test.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpeg; sourceTree = "<group>"; };
+		35DD1859247DF31A00092BC5 /* Metal 着色语言指南.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Metal 着色语言指南.pdf"; sourceTree = "<group>"; };
+		35DD185A247DF31A00092BC5 /* Metal 编程指南.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Metal 编程指南.pdf"; sourceTree = "<group>"; };
+		35DD185B247DF31A00092BC5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		35DD185C247DF31A00092BC5 /* abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abc.png; sourceTree = "<group>"; };
+		35DD185D247DF31A00092BC5 /* abc.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = abc.mp4; sourceTree = "<group>"; };
+		35DD185E247DF31A00092BC5 /* lookupTable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookupTable.png; sourceTree = "<group>"; };
+		35DD185F247DF31A00092BC5 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		35DD186A247E00B600092BC5 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		35DD186C247E00D000092BC5 /* CommonHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonHeader.h; sourceTree = "<group>"; };
 		9C8C988F2473D67F00B4A125 /* OpenGL ES_Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenGL ES_Study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8C98922473D67F00B4A125 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9C8C98932473D67F00B4A125 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +68,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35DD1854247DF31A00092BC5 /* CommonResources */ = {
+			isa = PBXGroup;
+			children = (
+				35DD1855247DF31A00092BC5 /* test.mov */,
+				35DD1856247DF31A00092BC5 /* greenscreen.mp4 */,
+				35DD1857247DF31A00092BC5 /* test.jpeg */,
+				35DD1858247DF31A00092BC5 /* pdf */,
+				35DD185C247DF31A00092BC5 /* abc.png */,
+				35DD185D247DF31A00092BC5 /* abc.mp4 */,
+				35DD185E247DF31A00092BC5 /* lookupTable.png */,
+				35DD185F247DF31A00092BC5 /* image.png */,
+			);
+			path = CommonResources;
+			sourceTree = "<group>";
+		};
+		35DD1858247DF31A00092BC5 /* pdf */ = {
+			isa = PBXGroup;
+			children = (
+				35DD1859247DF31A00092BC5 /* Metal 着色语言指南.pdf */,
+				35DD185A247DF31A00092BC5 /* Metal 编程指南.pdf */,
+				35DD185B247DF31A00092BC5 /* README.md */,
+			);
+			path = pdf;
+			sourceTree = "<group>";
+		};
 		9C8C98862473D67F00B4A125 = {
 			isa = PBXGroup;
 			children = (
@@ -62,10 +113,15 @@
 		9C8C98912473D67F00B4A125 /* OpenGL ES_Study */ = {
 			isa = PBXGroup;
 			children = (
+				35DD1854247DF31A00092BC5 /* CommonResources */,
 				9C8C98922473D67F00B4A125 /* AppDelegate.h */,
 				9C8C98932473D67F00B4A125 /* AppDelegate.m */,
 				9C8C98982473D67F00B4A125 /* ViewController.h */,
 				9C8C98992473D67F00B4A125 /* ViewController.m */,
+				35DD1851247D279800092BC5 /* MetalViewController.h */,
+				35DD1852247D279800092BC5 /* MetalViewController.m */,
+				35DD186A247E00B600092BC5 /* Shader.metal */,
+				35DD186C247E00D000092BC5 /* CommonHeader.h */,
 				9C8C989B2473D67F00B4A125 /* Main.storyboard */,
 				9C8C989E2473D68100B4A125 /* Assets.xcassets */,
 				9C8C98A02473D68100B4A125 /* LaunchScreen.storyboard */,
@@ -140,9 +196,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DD1864247DF31A00092BC5 /* Metal 编程指南.pdf in Resources */,
+				35DD1860247DF31A00092BC5 /* test.mov in Resources */,
+				35DD1861247DF31A00092BC5 /* greenscreen.mp4 in Resources */,
 				9C8C98A22473D68100B4A125 /* LaunchScreen.storyboard in Resources */,
+				35DD1863247DF31A00092BC5 /* Metal 着色语言指南.pdf in Resources */,
+				35DD1869247DF31A00092BC5 /* image.png in Resources */,
 				9C8C989F2473D68100B4A125 /* Assets.xcassets in Resources */,
+				35DD1865247DF31A00092BC5 /* README.md in Resources */,
 				9C8C989D2473D67F00B4A125 /* Main.storyboard in Resources */,
+				35DD1868247DF31A00092BC5 /* lookupTable.png in Resources */,
+				35DD1867247DF31A00092BC5 /* abc.mp4 in Resources */,
+				35DD1866247DF31A00092BC5 /* abc.png in Resources */,
+				35DD1862247DF31A00092BC5 /* test.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +221,8 @@
 			files = (
 				9C8C989A2473D67F00B4A125 /* ViewController.m in Sources */,
 				9C8C98942473D67F00B4A125 /* AppDelegate.m in Sources */,
+				35DD1853247D279800092BC5 /* MetalViewController.m in Sources */,
+				35DD186B247E00B600092BC5 /* Shader.metal in Sources */,
 				9C8C98A52473D68100B4A125 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SY2GB5YVPB;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -318,6 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SY2GB5YVPB;
 				INFOPLIST_FILE = "OpenGL ES_Study/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
