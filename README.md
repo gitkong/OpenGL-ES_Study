@@ -5,6 +5,8 @@ OpenGL ES 、Metal 学习
 
 官方文档：https://developer.apple.com/documentation/metal
 
+Metal Programming Guide：https://developer.apple.com/library/archive/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221
+
 落影：https://www.jianshu.com/nb/26273087
 
 
