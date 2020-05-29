@@ -45,7 +45,17 @@
     self.mtkView.delegate = self;
     self.viewportSize = (vector_uint2){self.mtkView.drawableSize.width, self.mtkView.drawableSize.height};
     
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 30, 100, 30)];
+    btn.backgroundColor = [UIColor grayColor];
+    [btn setTitle:@"Reset" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(resetRotate) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
     [self customInit];
+}
+
+- (void)resetRotate {
+    
 }
 
 - (void)customInit {
@@ -71,24 +81,48 @@
 - (void)setupVertex {
     static const LYVertex quadVertices[] =
     {  // 顶点坐标                          顶点颜色                    纹理坐标
-        {{-0.5f, 0.5f, 0.0f, 1.0f},      {0.0f, 0.0f, 0.5f},       {0.0f, 1.0f}},//左上
-        {{0.5f, 0.5f, 0.0f, 1.0f},       {0.0f, 0.5f, 0.0f},       {1.0f, 1.0f}},//右上
-        {{-0.5f, -0.5f, 0.0f, 1.0f},     {0.5f, 0.0f, 1.0f},       {0.0f, 0.0f}},//左下
-        {{0.5f, -0.5f, 0.0f, 1.0f},      {0.0f, 0.0f, 0.5f},       {1.0f, 0.0f}},//右下
-        {{0.0f, 0.0f, 1.0f, 1.0f},       {1.0f, 1.0f, 1.0f},       {0.5f, 0.5f}},//顶点
+        {{-0.5f, 0.5f, 0.0f, 1.0f},      {0.0f, 0.0f, 0.5f},       {0.0f, 1.0f}},//左上0
+        {{0.5f, 0.5f, 0.0f, 1.0f},       {0.0f, 0.5f, 0.0f},       {1.0f, 1.0f}},//右上1
+        {{-0.5f, -0.5f, 0.0f, 1.0f},     {0.5f, 0.0f, 1.0f},       {0.0f, 0.0f}},//左下2
+        {{0.5f, -0.5f, 0.0f, 1.0f},      {0.0f, 0.0f, 0.5f},       {1.0f, 0.0f}},//右下3
+//        {{0.0f, 0.0f, 1.0f, 1.0f},       {1.0f, 1.0f, 1.0f},       {0.5f, 0.5f}},//顶点
+        
+//        {{-0.5f, 0.5f, 1.0f, 1.0f},      {0.0f, 0.5f, 0.5f},       {0.25f, 0.25f}},//左上4
+//        {{0.5f, 0.5f, 1.0f, 1.0f},       {0.0f, 0.5f, 0.0f},       {0.75f, 0.25f}},//右上5
+//        {{-0.5f, -0.5f, 1.0f, 1.0f},     {0.5f, 0.0f, 1.0f},       {0.25f, 0.75f}},//左下6
+//        {{0.5f, -0.5f, 1.0f, 1.0f},      {0.0f, 0.5f, 0.5f},       {0.75f, 0.75f}},//右下7
+        
+        {{-0.5f, 0.5f, 1.0f, 1.0f},      {0.0f, 0.5f, 0.5f},       {0.0f, 1.0f}},//左上4
+        {{0.5f, 0.5f, 1.0f, 1.0f},       {0.0f, 0.5f, 0.0f},       {1.0f, 1.0f}},//右上5
+        {{-0.5f, -0.5f, 1.0f, 1.0f},     {0.5f, 0.0f, 1.0f},       {0.0f, 0.0f}},//左下6
+        {{0.5f, -0.5f, 1.0f, 1.0f},      {0.0f, 0.5f, 0.5f},       {1.0f, 0.0f}},//右下7
     };
     self.vertices = [self.mtkView.device newBufferWithBytes:quadVertices
                                                  length:sizeof(quadVertices)
                                                 options:MTLResourceStorageModeShared];
     static int indices[] =
-    { // 索引
+    { // 索引。多个三角形拼接成一个立体，0对应顶点坐标第一组，通过索引避免重复顶点，节省空间
+//        0, 3, 2,
+//        0, 1, 3,//底面
+//        0, 2, 4,
+//        4, 1, 0,
+//        2, 3, 4,
+//        1, 4, 3,
         0, 3, 2,
-        0, 1, 3,
-        0, 2, 4,
-        0, 4, 1,
-        2, 3, 4,
-        1, 4, 3,
+        0, 1, 3,//底面
+        3, 2, 6,
+        6, 7, 3,//
+        3, 7, 5,
+        5, 1, 3,//
+        5, 4, 0,
+        0, 1, 5,//
+        0, 2, 6,
+        6, 4, 0,//
+        4, 6, 7,
+        7, 5, 4,//
+        
     };
+    
     self.indexs = [self.mtkView.device newBufferWithBytes:indices
                                                      length:sizeof(indices)
                                                     options:MTLResourceStorageModeShared];

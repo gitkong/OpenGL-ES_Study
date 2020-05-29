@@ -103,6 +103,7 @@
     self.vertices = [self.mtkView.device newBufferWithBytes:quadVertex length:sizeof(quadVertex) options:MTLResourceStorageModeShared];
     // 获取顶点个数
     self.numVertices = sizeof(quadVertex) / sizeof(GKVertex);
+//    MTLVertexDescriptor
 }
 
 /// 初始化纹理数据
@@ -114,16 +115,19 @@
     textureDescriptor.width = image.size.width;
     textureDescriptor.height = image.size.height;
     // 创建纹理
-    self.texture = [self.mtkView.device newTextureWithDescriptor:textureDescriptor];
-    // 设置纹理上传的范围(xyz,whd)，类似UIKit的frame，用于表明纹理数据的存放区域
-    MTLRegion region = {{0, 0, 0}, {image.size.width, image.size.height, 1}};
-    Byte *imageBytes = [self loadImage:image];
-    if (imageBytes) {
-        // 上传纹理数据
-        [self.texture replaceRegion:region mipmapLevel:0 withBytes:imageBytes bytesPerRow:image.size.width * 4];
-        free(imageBytes);
-        imageBytes = NULL;
-    }
+    // 可利用贴纸加载器MTKTextureLoader加载贴纸
+    MTKTextureLoader *loader = [[MTKTextureLoader alloc] initWithDevice:self.mtkView.device];
+    self.texture = [loader newTextureWithCGImage:image.CGImage options:@{MTKTextureLoaderOptionSRGB : @YES,MTKTextureLoaderOptionGenerateMipmaps : @YES} error:NULL];
+//    self.texture = [self.mtkView.device newTextureWithDescriptor:textureDescriptor];
+//    // 设置纹理上传的范围(xyz,whd)，类似UIKit的frame，用于表明纹理数据的存放区域
+//    MTLRegion region = {{0, 0, 0}, {image.size.width, image.size.height, 1}};
+//    Byte *imageBytes = [self loadImage:image];
+//    if (imageBytes) {
+//        // 上传纹理数据
+//        [self.texture replaceRegion:region mipmapLevel:0 withBytes:imageBytes bytesPerRow:image.size.width * 4];
+//        free(imageBytes);
+//        imageBytes = NULL;
+//    }
     
 }
 
@@ -184,17 +188,21 @@
         
         // 设置纹理
         [renderEncoder setFragmentTexture:self.texture atIndex:0];
-        
+//        CAMetalLayer
+//        UIScreen
+//        MTLStoreAction
+//        MTLBuffer
+//        MTLDrawPrimitivesIndirectArguments
         // 绘制
         [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:self.numVertices];
         
         // 结束编码
         [renderEncoder endEncoding];
         
-        // 显示
+        // 显示,The currentDrawable property is automatically updated at the end of every frame.
         [commandBuffer presentDrawable:view.currentDrawable];
     }
-    // 提交
+    // 提交,A drawable’s presentation is registered by calling a command buffer’s presentDrawable: method before calling its commit method.
     [commandBuffer commit];
 }
 
