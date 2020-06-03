@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		352E66792485DB6D007C578F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352E66782485DB6D007C578F /* MainViewController.m */; };
 		352E667D2485DDAB007C578F /* MetalCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352E667C2485DDAB007C578F /* MetalCaptureViewController.m */; };
+		352E66CB2487CC84007C578F /* MetalGrayPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352E66CA2487CC83007C578F /* MetalGrayPicViewController.m */; };
 		35DD1853247D279800092BC5 /* MetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DD1852247D279800092BC5 /* MetalViewController.m */; };
 		35DD1860247DF31A00092BC5 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = 35DD1855247DF31A00092BC5 /* test.mov */; };
 		35DD1861247DF31A00092BC5 /* greenscreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 35DD1856247DF31A00092BC5 /* greenscreen.mp4 */; };
@@ -35,6 +36,8 @@
 		352E66782485DB6D007C578F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		352E667B2485DDAB007C578F /* MetalCaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalCaptureViewController.h; sourceTree = "<group>"; };
 		352E667C2485DDAB007C578F /* MetalCaptureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalCaptureViewController.m; sourceTree = "<group>"; };
+		352E66C92487CC83007C578F /* MetalGrayPicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalGrayPicViewController.h; sourceTree = "<group>"; };
+		352E66CA2487CC83007C578F /* MetalGrayPicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalGrayPicViewController.m; sourceTree = "<group>"; };
 		35DD1851247D279800092BC5 /* MetalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalViewController.h; sourceTree = "<group>"; };
 		35DD1852247D279800092BC5 /* MetalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalViewController.m; sourceTree = "<group>"; };
 		35DD1855247DF31A00092BC5 /* test.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.mov; sourceTree = "<group>"; };
@@ -79,6 +82,8 @@
 			children = (
 				352E667B2485DDAB007C578F /* MetalCaptureViewController.h */,
 				352E667C2485DDAB007C578F /* MetalCaptureViewController.m */,
+				352E66C92487CC83007C578F /* MetalGrayPicViewController.h */,
+				352E66CA2487CC83007C578F /* MetalGrayPicViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352E66CB2487CC84007C578F /* MetalGrayPicViewController.m in Sources */,
 				9C8C989A2473D67F00B4A125 /* ViewController.m in Sources */,
 				352E66792485DB6D007C578F /* MainViewController.m in Sources */,
 				9C8C98942473D67F00B4A125 /* AppDelegate.m in Sources */,
