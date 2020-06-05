@@ -10,6 +10,8 @@
 		352E66792485DB6D007C578F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352E66782485DB6D007C578F /* MainViewController.m */; };
 		352E667D2485DDAB007C578F /* MetalCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352E667C2485DDAB007C578F /* MetalCaptureViewController.m */; };
 		352E66CB2487CC84007C578F /* MetalGrayPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352E66CA2487CC83007C578F /* MetalGrayPicViewController.m */; };
+		352E66D22489D37E007C578F /* MetalVideoRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352E66D12489D37E007C578F /* MetalVideoRenderViewController.m */; };
+		352E66D52489E67A007C578F /* LYAssetReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 352E66D32489E67A007C578F /* LYAssetReader.m */; };
 		35DD1853247D279800092BC5 /* MetalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DD1852247D279800092BC5 /* MetalViewController.m */; };
 		35DD1860247DF31A00092BC5 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = 35DD1855247DF31A00092BC5 /* test.mov */; };
 		35DD1861247DF31A00092BC5 /* greenscreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 35DD1856247DF31A00092BC5 /* greenscreen.mp4 */; };
@@ -38,6 +40,10 @@
 		352E667C2485DDAB007C578F /* MetalCaptureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalCaptureViewController.m; sourceTree = "<group>"; };
 		352E66C92487CC83007C578F /* MetalGrayPicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalGrayPicViewController.h; sourceTree = "<group>"; };
 		352E66CA2487CC83007C578F /* MetalGrayPicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalGrayPicViewController.m; sourceTree = "<group>"; };
+		352E66D02489D37E007C578F /* MetalVideoRenderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalVideoRenderViewController.h; sourceTree = "<group>"; };
+		352E66D12489D37E007C578F /* MetalVideoRenderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalVideoRenderViewController.m; sourceTree = "<group>"; };
+		352E66D32489E67A007C578F /* LYAssetReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAssetReader.m; sourceTree = "<group>"; };
+		352E66D42489E67A007C578F /* LYAssetReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAssetReader.h; sourceTree = "<group>"; };
 		35DD1851247D279800092BC5 /* MetalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalViewController.h; sourceTree = "<group>"; };
 		35DD1852247D279800092BC5 /* MetalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalViewController.m; sourceTree = "<group>"; };
 		35DD1855247DF31A00092BC5 /* test.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.mov; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 				352E667C2485DDAB007C578F /* MetalCaptureViewController.m */,
 				352E66C92487CC83007C578F /* MetalGrayPicViewController.h */,
 				352E66CA2487CC83007C578F /* MetalGrayPicViewController.m */,
+				352E66D02489D37E007C578F /* MetalVideoRenderViewController.h */,
+				352E66D12489D37E007C578F /* MetalVideoRenderViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -136,6 +144,8 @@
 				35DD1854247DF31A00092BC5 /* CommonResources */,
 				9C8C98922473D67F00B4A125 /* AppDelegate.h */,
 				9C8C98932473D67F00B4A125 /* AppDelegate.m */,
+				352E66D42489E67A007C578F /* LYAssetReader.h */,
+				352E66D32489E67A007C578F /* LYAssetReader.m */,
 				352E66772485DB6D007C578F /* MainViewController.h */,
 				352E66782485DB6D007C578F /* MainViewController.m */,
 				9C8C98982473D67F00B4A125 /* ViewController.h */,
@@ -247,6 +257,8 @@
 				352E66792485DB6D007C578F /* MainViewController.m in Sources */,
 				9C8C98942473D67F00B4A125 /* AppDelegate.m in Sources */,
 				35DD1853247D279800092BC5 /* MetalViewController.m in Sources */,
+				352E66D22489D37E007C578F /* MetalVideoRenderViewController.m in Sources */,
+				352E66D52489E67A007C578F /* LYAssetReader.m in Sources */,
 				35DD186B247E00B600092BC5 /* Shader.metal in Sources */,
 				9C8C98A52473D68100B4A125 /* main.m in Sources */,
 				352E667D2485DDAB007C578F /* MetalCaptureViewController.m in Sources */,

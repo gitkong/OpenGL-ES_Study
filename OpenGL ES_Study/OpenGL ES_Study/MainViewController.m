@@ -10,6 +10,8 @@
 #import "ViewController.h"
 #import "MetalViewController.h"
 #import "MetalCaptureViewController.h"
+#import "MetalGrayPicViewController.h"
+#import "MetalVideoRenderViewController.h"
 
 static NSString *kGKUITableViewCellIdentifier = @"kGKUITableViewCellIdentifier";
 
@@ -36,7 +38,8 @@ static NSString *kGKUITableViewCellIdentifier = @"kGKUITableViewCellIdentifier";
         @"三角形",
         @"加载图片",
         @"摄像头采集",
-        @"Test"
+        @"灰度计算",
+        @"视频渲染"
     ];
     
     [tableView reloadData];
@@ -73,6 +76,14 @@ static NSString *kGKUITableViewCellIdentifier = @"kGKUITableViewCellIdentifier";
     }
     else if (indexPath.row == 2) {
         MetalCaptureViewController *vc = [[MetalCaptureViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 3) {
+        MetalGrayPicViewController *vc = [[MetalGrayPicViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 4) {
+        MetalVideoRenderViewController *vc = [[MetalVideoRenderViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
